@@ -1,0 +1,37 @@
+extends layout
+
+block content
+    .conteiner.all-content
+        .col-md-2.user-panel
+            img.user-img(src=userImg)
+            a(href='/settings').settings Edit
+                span.glyphicon.glyphicon-edit.icon-settings
+            h3.user-name=userName
+
+        .col-md-10
+            .row.statistic
+                .wrapper-item.col-md-3
+                    .col-md-8.text-properties
+                        h5.sold-product Goods sold:
+                    .col-md-4.numberItem
+                        span.count-sold-product=soldProduct
+                .wrapper-item.col-md-3
+                    .col-md-8.text-properties
+                        h5.all-Product-sale Offtake:
+                    .col-md-4.numberItem
+                        span.count-product-sale=offTake
+                .wrapper-item.col-md-3.last-element
+                    .col-md-8.text-properties
+                        h5.last-added Add new product
+                    .col-md-4.numberItem
+                        a(href="/addProduct")
+                            button.submit(type='submit') Add new product
+            .row
+                for product in products
+                    .wrapper-item.col-md-4.wrapper-product
+                        .col-md-4.productImgWrapper
+                            img.productImg(src=product.photo)
+                        .col-md-8
+                            h5.productName=product.name
+                            a(href='/product'+product.link)
+                                button(type='submit')=product.name

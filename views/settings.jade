@@ -1,0 +1,25 @@
+extends layout
+
+block content
+    .conteiner.all-content
+        .row
+            .container
+                .col-md-12
+                    form.form-horizontal.change-form(name='changeData-form')
+                        .form-group
+                            label.col-lg-2.control-label(for="input-userImage") Upload new photo:
+                            .col-lg-8
+                                input.form-control#input-userImage(name="userPhoto", type='text', value=userPhoto)
+                        .form-group
+                            label.col-lg-2.control-label(for="input-userName") Change username:
+                            .col-lg-8
+                                input.col-lg-8.form-control#input-userName(name="username", value=username)
+                        .form-group
+                            label.col-lg-2.control-label(for="input-userPhoneNumber") Change phone number:
+                            .col-lg-8
+                                input.col-lg-8.form-control#input-userPhoneNumber(name="phoneNumber")
+                        .form-group
+                            .col-lg-offset-2.col-lg-10
+                                button.btn.btn-primary(type='submit', data-loading-text='Changing...') Change
+                                span.help-block.error
+    script(src='/js/changeData.js')

@@ -1,0 +1,66 @@
+h5 {
+  font: 18px "Nautilus Pompilius", Helvetica, Arial, sans-serif; }
+
+.navbar {
+  margin: 0; }
+
+.wrapper-item {
+  height: 90px;
+  margin-top: 5px;
+  margin-left: 6px;
+  margin-right: 1px;
+  border: solid  white 1px;
+  border-left: solid #4be9eb 5px;
+  box-shadow: #132113 4px 4px 15px -2px; }
+
+.last-element {
+  margin-right: 0; }
+
+.user-panel {
+  height: 91.7vh;
+  box-shadow: #132113 1px 11px 20px -2px;
+  margin-right: 0px; }
+
+.text-properties {
+  height: 100%;
+  text-align: center; }
+
+.user-img {
+  margin-top: 4px;
+  height: 35%;
+  width: 100%;
+  border-radius: 100%; }
+
+.settings {
+  float: right;
+  font-size: 24px; }
+
+.icon-settings {
+  margin-left: 8px; }
+
+.user-name {
+  display: block;
+  text-align: center;
+  font: 18px "Nautilus Pompilius", Helvetica, Arial, sans-serif; }
+
+.statistic {
+  margin-bottom: 10px; }
+
+.wrapper-product {
+  background: rgba(0, 221, 235, 0.71) center;
+  border-left: solid #2aeb00 15px; }
+  .wrapper-product:hover {
+    background: #2aeb00 center;
+    transition: ease-in 1.2s; }
+
+.productImgWrapper {
+  height: 100%; }
+
+.productImg {
+  height: 100%;
+  width: 100%; }
+
+.submit {
+  margin-top: 25%; }
+
+/*# sourceMappingURL=office.css.map */

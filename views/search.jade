@@ -1,0 +1,8 @@
+extends layout
+
+block content
+    if statusSearch == false
+        .alert.alert-danger(role="alert")
+            span.glyphicon.glyphicon-warning-sign
+            p.warning-text Not found product you requested
+    else

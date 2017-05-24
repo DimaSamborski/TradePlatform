@@ -1,0 +1,13 @@
+.productImg {
+  height: 100%;
+  width: 100%;
+  display: inline-block; }
+
+.productName {
+  display: block;
+  margin: 0 auto; }
+
+.productDescription {
+  display: block; }
+
+/*# sourceMappingURL=index.css.map */

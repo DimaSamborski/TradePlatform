@@ -1,0 +1,44 @@
+extends layout
+
+block content
+    .container-fluid
+        .col-md-4
+            img(src=productImg).productImg
+        .col-md-8
+            .row.col-md-12
+                h3=productName
+            .row.col-md-12
+                button#myBtn Buy
+            .price=productPrice
+            .row.col-md-12
+                p=productDescription
+    #myModal.modal
+        .modal-content
+            span.close &times
+            p You buy this product? If yes pleas phone for author. If not close this window.
+            form.form-horizontal.login-form(name='buy-product-form')
+                .form-group
+                    label.col-lg-2.control-label(for='input-productName') Name
+                    .col-lg-8
+                        input.form-control#input-productName(name='productName', value=productName, type='text', placeholder="name")
+                .form-group
+                    label.col-lg-2.control-label(for='input-description') Description
+                    .col-lg-8
+                        input.form-control#input-description(name='description', value=productDescription, type='text', placeholder="description")
+                .form-group
+                    label.col-lg-2.control-label(for='input-price') Price
+                    .col-lg-8
+                        input.form-control#input-price(name='price', value=productPrice, type='text', placeholder="price")
+                .form-group
+                    label.col-lg-2.control-label(for='input-phoneNumber') Phone number
+                    .col-lg-8
+                        input.form-control.form-control-static#input-phoneNumber(name='phoneNumber', value=phoneNumber, type='text', placeholder="price")
+                .form-group.hide
+                    .col-lg-8
+                        input.form-control#input-userID(name='userID', value=authorID, type='text', placeholder="userID")
+
+                .form-group
+                    .col-lg-offset-2.col-lg-10
+                        button.btn.btn-primary#submit(type='submit', data-loading-text='Sending...') Buy product
+                        span.help-block.error
+    script(src="/js/productPage.js")

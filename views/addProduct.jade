@@ -1,0 +1,34 @@
+extends layout
+
+block content
+    form.form-horizontal.login-form(name='add-product-form')
+        .form-group
+            label.col-lg-2.control-label(for='input-productName') Name
+            .col-lg-8
+                input.form-control#input-productName(name='productName', value='', type='text', placeholder="name")
+        .form-group
+            label.col-lg-2.control-label(for='input-description') Description
+            .col-lg-8
+                input.form-control#input-description(name='description', value='', type='text', placeholder="description")
+        .form-group
+            label.col-lg-2.control-label(for='input-price') Price
+            .col-lg-8
+                input.form-control#input-price(name='price', value='0', type='number', min='0', placeholder="price")
+        .form-group
+            label.col-lg-2.control-label(for='categories') Select categories :
+            .col-lg-8
+                select(name='categories')#categories.form-control
+                    option Laptop
+                    option NetBook
+                    option PC
+                    option MacBook
+        .form-group
+            label.col-lg-2.control-label(for='input-description') Link of image
+            .col-lg-8
+                input.form-control#input-img(name='img', type='text', placeholder="img")
+        .form-group
+            .col-lg-offset-2.col-lg-10
+                button.btn.btn-primary#submit(type='submit', data-loading-text='Adding...') Add product
+                span.help-block.error
+
+    script(src='/js/addProduct.js')

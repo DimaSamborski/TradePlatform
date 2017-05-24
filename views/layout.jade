@@ -1,0 +1,41 @@
+doctype html
+html
+  head
+    title= title
+    // Style link
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css')
+    link(rel='stylesheet', href='/font/nautilus.css')
+    link(rel='stylesheet', href='/stylesheets/'+title+'.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+
+    // Script link
+    script(src="/js/jquery-3.2.0.min.js")
+    script(src="/js/bootstrap.js")
+
+
+  body
+
+    nav.navbar.navbar-default
+      ul.nav.nav-pills.navbar-left
+        li(role='presentation')
+          a(href='/')
+            span.glyphicon.glyphicon-home.iconCustom.OfficeIcon  Home
+        if login === true
+          li(role='presentation')
+            a(href='/office')
+              span.glyphicon.glyphicon-user.iconCustom.OfficeIcon  Office
+          li(role='presentation')
+            a(href='/settings')
+              span.glyphicon.glyphicon-edit.iconCustom.OfficeIcon  Settings
+      if login === true
+        ul.nav.navbar-right.login.nav-pills
+          li(role='presentation').login
+            a(href='/goOut')
+              span.glyphicon.glyphicon-log-out
+      else
+        ul.nav.navbar-right.login.nav-pills
+          li(role='presentation')
+            a(href='/login').login
+              span.glyphicon.glyphicon-log-in.iconCustom
+    block content
